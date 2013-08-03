@@ -17,11 +17,11 @@ For example let's say you want to archive content of `temp` directory which is l
 * Edit runViola.sh to set GROOVY_HOME and absolute path to where you extracted Viola
 * Edit viola.properties to specify comma separated folder(s) you would like Viola to clean
 
-## Configure CRON Job
+## Configure CRON Job (TODO)
 
 * Open Terminal and enter `crontab -e`. Edit file to put the following job:
 
-`0 20 /7 * * ABSOLUTE_PATH_TO_runViola.sh -update -config=myconfig`
+`0 20 /7 * * ABSOLUTE_PATH_TO_runViola.sh`
 
 The above CRON job is configured to run every 7 days at 9pm. You can configure this as
 per your requirements.
