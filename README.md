@@ -19,7 +19,7 @@ For example let's say you want to archive content of `temp` directory which is l
 * Edit runViola.sh to set GROOVY_HOME and absolute path to where you extracted Viola
 * Edit viola.properties to specify comma separated folder(s) you would like Viola to clean
 
-## Configure CRON Job (TODO)
+## Configure CRON Job
 
 * Open Terminal and enter `crontab -e`. Edit file to put the following job:
 
