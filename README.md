@@ -34,8 +34,8 @@ Help with CRON Arguments:
 * Argument 5: Day of Week (0 - 6) Sunday = 0
 * Argument 6: Command
 
-# Current Limitations
-* Cannot clean folders that require ADMIN/ROOT access unless the script is run with ADMIN/ROOT access
+# Limitations
+It is not really a limitation but a security feature of OS. The script cannot clean folders that require ADMIN/ROOT access unless the script is run with ADMIN/ROOT access.
 
 # Troubleshoot
 
