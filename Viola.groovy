@@ -58,12 +58,13 @@ class ViolaArchiver implements Archiver {
                 def thisArchiveFolder = new File(thisArchivePath)
                 if(!thisArchiveFolder.exists()) { thisArchiveFolder.mkdirs() }
 
-                Path source = Paths.get(f)
-                Path target = Paths.get(thisArchivePath)    
-                Files.move(source, target, REPLACE_EXISTING)
-
-                // Since we moved create folder
-                if(!folder.exists()) { folder.mkdirs() }
+                File[] files = folder.listFiles()
+                for(File file : files) {                    
+                    String fAbsolutePath = file.getAbsolutePath()
+                    Path source = Paths.get(fAbsolutePath)
+                    Path target = Paths.get(thisArchivePath +  fAbsolutePath.substring(fAbsolutePath.lastIndexOf('/')))   
+                    Files.move(source, target, REPLACE_EXISTING)
+                }
             } 
         }
     }

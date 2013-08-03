@@ -21,22 +21,26 @@ For example let's say you want to archive content of `temp` directory which is l
 
 * Open Terminal and enter `crontab -e`. Edit file to put the following job:
 
-`0 20 /7 * * ABSOLUTE_PATH_TO_runViola.sh`
+`0 20 */7 * * ABSOLUTE_PATH_TO_runViola.sh`
 
-The above CRON job is configured to run every 7 days at 9pm. You can configure this as
-per your requirements.
+The above CRON job is configured to run every 7 days at 9pm. You can configure this as per your requirements.
 
 Help with CRON Arguments:
 
-Argument 1: Minute (0 - 59)
-Argument 2: Hour (0 - 23)
-Argument 3: Day of Month (1 - 31)
-Argument 4: Month (1-12)
-Argument 5: Day of Week (0 - 6) Sunday = 0
-Argument 6: Command
+* Argument 1: Minute (0 - 59)
+* Argument 2: Hour (0 - 23)
+* Argument 3: Day of Month (1 - 31)
+* Argument 4: Month (1-12)
+* Argument 5: Day of Week (0 - 6) Sunday = 0
+* Argument 6: Command
 
 # Current Limitations
-* Cannot clean folders that require ADMIN/ROOT access
+* Cannot clean folders that require ADMIN/ROOT access unless the script is run with ADMIN/ROOT access
+
+# Troubleshoot
+
+## java.nio.file.AccessDeniedException
+The target folder requires ADMIN/ROOT access. Run the script with ADMIN/ROOT access
 
 # License
 Copyright (c) 2013 Jatinder Singh
