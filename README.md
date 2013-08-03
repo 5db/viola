@@ -13,6 +13,8 @@ For example let's say you want to archive content of `temp` directory which is l
 
 # How to configure Viola?
 
+* Download Java 7 and Groovy 2.1.6
+* Set $JAVA_HOME
 * Download and extract Viola project
 * Edit runViola.sh to set GROOVY_HOME and absolute path to where you extracted Viola
 * Edit viola.properties to specify comma separated folder(s) you would like Viola to clean
